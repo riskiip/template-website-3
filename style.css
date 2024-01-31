@@ -1,13 +1,38 @@
 :root {
-    --primary-color: #cdac2c;
+    --primary-color: #00ccff;
+    --title-color: #0080ff;
     --background-color: #f0f3f7;
     --secon-color: #9da2ad;
     --grey: #7a7a7b;
     --white: #ffffff;
 }
 
+@font-face {
+    font-family: "Helvatica";
+    src: url(assets/fonts/HelveticaNeueLight.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Helvatica";
+    src: url(assets/fonts/HelveticaNeuBold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Helvatica";
+    src: url(assets/fonts/HelveticaNeueMedium.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Helvatica";
+    src: url(assets/fonts/HelveticaNeueThin.ttf);
+    font-weight: 100;
+}
+
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Helvatica', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,6 +73,12 @@ html {
 .logo {
     font-size: 2rem;
     font-weight: 800;
+    color: var(--primary-color);
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
     color: var(--primary-color);
 }
 
@@ -100,6 +131,8 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .bg-img {
@@ -128,8 +161,8 @@ section {
 }
 
 .slogan h1 {
-    font-size: 7rem;
-    color: var(--primary-color);
+    font-size: 4rem;
+    color: var(--title-color);
 }
 
 .slogan button {
@@ -137,9 +170,9 @@ section {
     outline: none;
     border: none;
     background-color: var(--background-color);
-    border: .125rem solid var(--primary-color);
+    border: .125rem solid #123770;
     border-radius: 2rem;
-    color: var(--primary-color);
+    color: #123770;
     margin: 3rem 0;
     cursor: pointer;
     font-weight: 600;
@@ -164,7 +197,7 @@ section {
 
 
 .about-slogan {
-    padding: 4rem;
+    padding: 2rem;
     background-color: var(--white);
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -184,6 +217,14 @@ section {
     color: var(--primary-color);
 }
 
+.secondary-color {
+    color: var(--secon-color);
+}
+
+.third-color {
+    color: var(--title-color);
+}
+
 .food-menu {
     padding: 4rem;
     background-color: var(--white);
@@ -196,7 +237,7 @@ section {
 }
 
 .food-menu p {
-    margin: 2rem 0;
+    /*margin: 2rem 0;*/
 }
 
 .food-category {
@@ -225,8 +266,8 @@ section {
 .food-item-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 3rem;
+    justify-content: center;
+    height: 100%;
 }
 
 .food-item {
@@ -265,7 +306,7 @@ section {
 }
 
 .img-holder:hover {
-    transform: scale(2) rotate(45deg);
+    transform: scale(2);
 }
 
 .item-info {
@@ -385,6 +426,7 @@ section {
 
 .food-item-wrap.all>div {
     display: block;
+    margin: 5px;
 }
 
 .food-item-wrap.salad>div.salad-type {
