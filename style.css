@@ -633,6 +633,10 @@ section {
   display: none;
 }
 
+section.footer {
+  padding: 0 !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   * {
@@ -641,6 +645,10 @@ section {
 
   .banner-mobile {
     display: block;
+  }
+
+  section.footer {
+    padding: 0 0 24px 0 !important;
   }
 
   h1 {
