@@ -314,13 +314,18 @@ section {
     transform: scale(2);
 } */
 
-.product-card {
+.product-card,
+.other-card-1,
+.other-card-2 {
   display: flex;
   border-radius: 8px;
   overflow: hidden;
-  width: 500px; /* Adjust width as needed */
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+}
+
+.product-card {
+  width: 500px;
 }
 
 .product-card:hover {
@@ -637,10 +642,53 @@ section.footer {
   padding: 0 !important;
 }
 
+.other-product-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-card-1,
+.other-card-2 {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.other-card-1:hover,
+.other-card-2:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add drop shadow */
+  transform: scale(1.1);
+  transition: 0.6s ease-in-out;
+}
+
+.other-image {
+  max-width: 100px;
+  max-height: 150px;
+  margin-bottom: 12px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   * {
     font-size: 13px;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .other-product-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   .banner-mobile {
